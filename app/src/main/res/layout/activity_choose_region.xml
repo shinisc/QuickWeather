@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <include layout="@layout/title_choose"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/weather_background_choose"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/choose"
+            android:scaleType="centerCrop"
+            android:alpha="0.8"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:overScrollMode="never"
+                    android:scrollbars="none">
+                        <include layout="@layout/province_list"
+                            android:layout_height="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"/>
+
+                        <include layout="@layout/city_list"
+                            android:layout_height="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"/>
+
+                        <include layout="@layout/county_list"
+                            android:layout_height="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"/>
+                </LinearLayout>
+        </FrameLayout>
+
+</LinearLayout>
